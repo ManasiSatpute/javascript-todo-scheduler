@@ -1,0 +1,184 @@
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f7 0%, #d9e4f5 100%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 70px;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 420px;
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1f2d3d;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+input#task {
+    flex: 1;
+    padding: 11px 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+input#task:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74,144,226,0.15);
+}
+
+.calendar-icon {
+    font-size: 1.3rem;
+    color: #4a90e2;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.calendar-icon:hover {
+    transform: scale(1.15);
+    color: #357abd;
+}
+
+/* ===== Add Button ===== */
+#addBtn {
+    width: 100%;
+    margin-top: 12px;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    border: none;
+    padding: 11px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#addBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(74,144,226,0.35);
+}
+
+/* ===== Task List ===== */
+ul {
+    list-style: none;
+    margin-top: 25px;
+    padding: 0;
+}
+
+/* ===== Task Card ===== */
+li {
+    background: #f8faff;
+    margin-bottom: 14px;
+    padding: 14px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+    transition: all 0.25s ease;
+}
+
+li:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== Checkbox (Modern Style) ===== */
+li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #4a90e2;
+    cursor: pointer;
+}
+
+/* ===== Text Group ===== */
+.task-text-group {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.task-text-group span {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.task-text-group small {
+    color: #7f8c8d;
+    font-size: 0.75rem;
+    margin-top: 3px;
+}
+
+.completed span {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.completed small {
+    color: #bbb;
+}
+
+.delete {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.delete:hover {
+    background-color: #e60000;
+    transform: scale(1.08);
+}
+
+#clear {
+    width: 100%;
+    margin-top: 15px;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#clear:hover {
+    background: #222;
+}
+
+li {
+    animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
